@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu Te Amo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="amor">
+        <h1>EU TE AMO</h1>
+        <div id="baloes"></div>
+    </div>
+
+    <script>
+        // Configura o fundo rosa e cria balões
+        document.body.style.backgroundColor = '#FFB6C1'; // Fundo rosa
+
+        const baloesContainer = document.getElementById("baloes");
+        for (let i = 0; i < 5; i++) {
+            const balao = document.createElement("div");
+            balao.className = 'balao';
+            baloesContainer.appendChild(balao);
+        }
+    </script>
+</body>
+</html>

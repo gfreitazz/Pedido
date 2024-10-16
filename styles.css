@@ -1,0 +1,33 @@
+body {
+    background-color: #E6E6FA; /* Roxo claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#sim {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+}
+
+#nao {
+    background-color: #f44336; /* Vermelho */
+    color: white;
+    position: relative;
+}

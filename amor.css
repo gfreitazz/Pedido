@@ -1,0 +1,20 @@
+#baloes {
+    position: relative;
+    height: 300px;
+}
+
+.balao {
+    width: 50px;
+    height: 80px;
+    background-color: #FF69B4; /* Cor dos balões */
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    bottom: 0;
+    animation: flutuar 5s infinite;
+}
+
+@keyframes flutuar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}
