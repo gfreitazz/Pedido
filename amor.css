@@ -1,20 +1,78 @@
+body {
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #baloes {
-    position: relative;
-    height: 300px;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+
+    top: 10vw;
+    left: 0;
 }
 
 .balao {
-    width: 50px;
-    height: 80px;
-    background-color: #FF69B4; /* Cor dos balões */
-    border-radius: 50% 50% 0 0;
-    position: absolute;
-    bottom: 0;
-    animation: flutuar 5s infinite;
+  display:inline-block;
+   width:120px;
+  height:145px;
+  background:hsl(215,50%,65%);
+  border-radius:80%;
+  position:relative;
+  box-shadow:inset -10px -10px 0 rgba(0,0,0,0.07);
+  margin:20px 30px;
+  transition:transform 0.5s ease;
+  z-index:10;
+  animation:balloons 4s ease-in-out infinite;
+  transform-origin:bottom center;
 }
 
-@keyframes flutuar {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-100px); }
-    100% { transform: translateY(0); }
+@keyframes balloons {
+  0%,100%{ transform:translateY(0) rotate(-4deg); }
+  50%{ transform:translateY(-25px) rotate(4deg); }
 }
+
+
+.balao:before {
+  content:"▲";
+  font-size:20px;
+  color:hsl(215,30%,50%);
+  display:block;
+  text-align:center;
+  width:100%;
+  position:absolute;
+  bottom:-12px;
+  z-index:-100;
+}
+
+.balao:after {
+ display:inline-block; 
+    top:153px;
+    left: 50%;
+    transform: translateX(-50%);
+  position:absolute;
+  height:250px;
+  width:1px;
+  margin:0 auto;
+  content:"";
+  background:rgba(0,0,0,0.2); 
+}
+
+.balao:nth-child(2){ background:hsl(245,40%,65%); animation-duration:3.5s; }
+.balao:nth-child(2):before { color:hsl(245,40%,65%);  }
+
+.balao:nth-child(3){ background:hsl(139,50%,60%); animation-duration:3s; }
+.balao:nth-child(3):before { color:hsl(139,30%,50%);  }
+
+.balao:nth-child(4){ background:hsl(59,50%,58%); animation-duration:4.5s; }
+.balao:nth-child(4):before { color:hsl(59,30%,52%);  }
+
+.balao:nth-child(5){ background:hsl(23,55%,57%); animation-duration:5s; }
+.balao:nth-child(5):before { color:hsl(23,44%,46%);  }
